@@ -10,6 +10,15 @@
 
 // Start coding here
 
+const addBonusForSelectedDepartment = (employeeInfo,bonus,department) =>{
+  
+  let result = employeeInfo.filter((element) => element.department === department).map((element) => element.salary + bonus).reduce((acc,curr)=>acc+curr)
+return `ตำแหน่ง ${department} ได้โบนัสเพิ่มขึ้นรวมทั้งหมด ${result} บาท`
+  
+  
+  
+}
+
 const employeeInfo = [
   {
     firstname: "Alice",
